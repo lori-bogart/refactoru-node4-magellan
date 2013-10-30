@@ -28,24 +28,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-// app.get('/users', user.list);
-app.get('/indexCanary', function(req, resp){
-		resp.render("indexCanary");
-	});
-app.get('/indexCapeVerde', function(req, resp){
-		resp.render("indexCapeVerde");
-	});
-app.get('/indexGuam', function(req, resp){
-		resp.render("indexGuam");
-	});
-app.get('/indexPhil', function(req, resp){
-		resp.render("indexPhil");
-	});
-app.get('/indexStrait', function(req, resp){
-		resp.render("indexStrait");
-	});
-
-
+app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
